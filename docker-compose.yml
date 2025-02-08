@@ -1,9 +1,5 @@
-version: '3'
 services:
   MainFrontend:
-    build:
-      context: ./app
-      dockerfile: Dockerfile
     image: main-frontend:latest
     container_name: main-frontend
     ports:
