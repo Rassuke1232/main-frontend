@@ -1,13 +1,9 @@
 services:
-  MainFrontend:
-    image: main-frontend:latest
+  scada:
+    build: .
+    image: scada_agent:latest
     container_name: main-frontend
     ports:
-      - "3000:3000"   # Expose your app on port 3000
-    volumes:
-      - /app    # Mount the frontend directory into the container
-    working_dir: /app  # Set working directory to where the app is located
-    command: npm run start  # Command to run when container starts
-    environment:
-      - NODE_ENV=production  # Set environment variable if needed
-    restart: always  # Ensure the app restarts if it crashes
+      - "3000:3000"
+
+    restart: always
