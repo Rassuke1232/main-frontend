@@ -5,6 +5,7 @@ WORKDIR /app
 
 # Kopeeri package.json ja package-lock.json ning paigalda sõltuvused
 COPY package*.json ./
+
 RUN npm install -g typescript
 RUN npm install
 
