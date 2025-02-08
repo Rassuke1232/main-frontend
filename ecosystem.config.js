@@ -12,9 +12,9 @@ module.exports = {
   deploy : {
     production : {
       user : 'deployer',
-      host : '207.154.253.206',
+      host : '68.183.219.8',
       ref  : 'origin/master',
-      repo : 'git@207.154.253.206:/var/git/bes/main-frontend.git',
+      repo : 'git@207.154.253.206:/var/git/main-frontend.git',
       path : '/var/www/main-frontend/',
       'pre-deploy-local': '',
       'post-deploy': 'docker compose -p main-frontend build && docker compose -p main-frontend stop && docker compose -p main-frontend up -d',
