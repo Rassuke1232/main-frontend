@@ -1,7 +1,7 @@
 module.exports = {
   apps : [{
     name: "main-frontend",
-    script: 'npm run dev',
+    script: 'npm run dev -- --host',
     instances: 1,
     autorestart: true,
     watch: false,
