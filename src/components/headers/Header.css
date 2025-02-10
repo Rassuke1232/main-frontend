@@ -1,0 +1,66 @@
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #333; /* Dark background color */
+    padding: 10px; /* Space around the header */
+}
+
+.main-header nav {
+    display: flex; /* Arrange the list items horizontally */
+    align-items: center; /* Ensure nav items are vertically centered */
+}
+
+.login-button {
+
+}
+
+.header-buttons {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    margin-left: 10px;
+
+}
+
+.header-buttons button {
+    margin-left: 10px;
+}
+
+.user-info {
+    top: 50%; /* Vertically center the button */
+    right: 50px; /* Space between the button and the right edge */
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0; /* Space between the button and the right edge */
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    z-index: 101;
+}
+
+.dropdown-menu button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dropdown-menu button:hover {
+    background-color: #f1f1f1;
+}
+
+.user-info span {
+    cursor: pointer;
+}
+

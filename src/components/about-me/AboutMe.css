@@ -1,0 +1,21 @@
+.personal-details {
+    background: #282c34;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.me-picture {
+    border-radius: 5px;
+    width: 150px;
+    height: auto;
+}
+.summary {
+    text-align: left;
+    padding-left: 20px;
+    max-width: 40%;
+}
+
+.summary p {
+    margin: 5px
+}
+/* Modal background styling */

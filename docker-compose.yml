@@ -1,5 +1,5 @@
 services:
-  scada:
+  cvproject:
     build: .
     image: main-frontend:latest
     container_name: main-frontend
