@@ -1,5 +1,6 @@
 # Dockerfile
-FROM node:23.7.0
+# --- BUILD STAGE ---
+FROM node:23.7.0 AS build
 
 WORKDIR /app
 
@@ -17,7 +18,11 @@ COPY . .
 
 RUN npm run build
 
+# --- PRODUCTION STAGE ---
 FROM nginx:alpine AS production
+
+# Copy the custom Nginx configuration file into the container
+COPY default.conf /etc/nginx/conf.d/default.conf
 
 WORKDIR /usr/share/nginx/html
 
@@ -26,5 +31,5 @@ RUN rm -rf ./*
 COPY --from=build /app/dist .
 
 EXPOSE 5173
-# Käivita rakendus PM2 konteineris
+
 CMD ["nginx", "-g", "daemon off;"]

@@ -4,6 +4,6 @@ services:
     image: main-frontend:latest
     container_name: main-frontend
     ports:
-      - "5173:5173"
+      - "80:80"
 
     restart: always
